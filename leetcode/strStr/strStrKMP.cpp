@@ -14,13 +14,14 @@ public:
         int j = -1, i = 0;//j在后面，i在前面
         vector<int> b(needle.size() + 1);
         b[i] = j;
-        cout << "b[]: " << b[0];
+        cout << "b[0]:" << b[0];
         while(i < needle.size())
         {
+            cout << setw(4) << "j:" << j << setw(4) << "i:" << i << endl;
             while(j >= 0 && needle[i] != needle[j]) j = b[j];
             i++, j++;
             b[i] = j;
-            cout << "," << b[i];
+            cout << "b[" << i << "]: " << b[i];
         }
         cout << endl;
         j = 0, i = 0; //j这回是text的， i是pattern的
@@ -40,7 +41,7 @@ public:
 
 int main (int argc, char* argv[]){
     string needle = "aabaaf";
-    string haystack = "aabaabaabaaf";
+    string haystack = "aabaabaaf";
     Solution sl;
     cout << sl.strStr(haystack, needle) << endl;
 }
