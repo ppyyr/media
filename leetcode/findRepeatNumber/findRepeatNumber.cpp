@@ -1,3 +1,8 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
 class Solution {
 public:
     int findRepeatNumber(vector<int>& nums) {
@@ -13,3 +18,10 @@ public:
         return -1;
     }
 };
+
+int main(int argc, char** argv)
+{
+    Solution sl;
+    vector<int> nums = {2, 3, 4, 0, 1, 0, 2};
+    int result = sl.findRepeatNumber(nums); 
+}
