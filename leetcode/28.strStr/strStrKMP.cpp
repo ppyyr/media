@@ -40,8 +40,8 @@ public:
 };
 
 int main (int argc, char* argv[]){
-    string needle = "aabaaf";
-    string haystack = "aabaabaaf";
+    string needle = "aabaaabb";
+    string haystack = "aabaabaaaabaaabb";
     Solution sl;
     cout << sl.strStr(haystack, needle) << endl;
 }
